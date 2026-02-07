@@ -1,1 +1,2 @@
 rootProject.name = 'dialogos-httpPluginDistribution'
+includeBuild '../dialogos-plugin-json'

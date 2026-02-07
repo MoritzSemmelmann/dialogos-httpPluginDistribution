@@ -16,7 +16,8 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.dialogos-project:dialogos:2.1.4'
+    runtimeOnly 'com.github.dialogos-project:dialogos:2.1.4'
+    runtimeOnly 'com.github.dialogos-project:dialogos-plugin-json'
 }
 
 application {
