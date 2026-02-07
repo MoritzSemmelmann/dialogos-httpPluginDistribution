@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 group = 'com.github.dialogos-project'
@@ -7,14 +8,17 @@ version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
+    maven {
+        name 'DFKI-MLT'
+        url 'https://raw.githubusercontent.com/DFKI-MLT/Maven-Repository/main'
+    }
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation 'com.github.dialogos-project:dialogos:2.1.4'
 }
 
-test {
-    useJUnitPlatform()
+application {
+    mainClass = 'com.clt.dialogos.DialogOS'
 }
